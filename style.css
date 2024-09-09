@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #dce3e8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 15px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 360px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 3px solid #333;
+    border-radius: 10px;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.cell:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cell.X {
+    color: #3498db;
+}
+
+.cell.O {
+    color: #e74c3c;
+}
+
+#status {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+#reset-button {
+    background-color: #e74c3c;
+}
+
+#reset-button:hover {
+    background-color: #c0392b;
+}
+
+#player-mode, #ai-mode {
+    background-color: #2ecc71;
+}
+
+#player-mode:hover, #ai-mode:hover {
+    background-color: #27ae60;
+}
